@@ -22,4 +22,22 @@ export class ListBlogComponent implements OnInit {
     });
   }
 
+  deleteBlog(id: number) {
+    this.blogService.delete(id).subscribe( success => {
+      alert('Đã xóa thành công id ' + id);
+      this.blogs = this.blogs.filter((blog, index) => this.blogs[index].id !== id);
+    },
+
+    error => {
+      alert('Lỗi');
+    }
+    ,
+
+    () => {
+      // luon goi ham nay;
+    }
+
+    );
+  }
+
 }
