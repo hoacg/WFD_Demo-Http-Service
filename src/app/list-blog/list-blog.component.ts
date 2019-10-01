@@ -13,6 +13,7 @@ export class ListBlogComponent implements OnInit {
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
+    console.log('Gọi ngOnInit()');
     this.getList();
   }
 

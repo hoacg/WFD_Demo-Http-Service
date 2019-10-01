@@ -18,8 +18,8 @@ export class BlogService {
     return this.http.get<Blog>(this.apiUrl + '/' + id);
   }
 
-  create(blog: Blog) {
-    return this.http.post(this.apiUrl, blog);
+  create(blog: Blog): Observable<Blog> {
+    return this.http.post<Blog>(this.apiUrl, blog);
   }
 
   update(id: number, blog: Blog) {

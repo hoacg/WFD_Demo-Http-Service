@@ -1,1 +1,7 @@
-<p>create-blog works!</p>
+<form>
+  <input name="userId" type="number" [(ngModel)]="blog.userId" placeholder="user id" /><br>
+  <input name="title" type="text" [(ngModel)]="blog.title"  placeholder="title"/><br>
+  <input name="body" type="text"  [(ngModel)]="blog.body"  placeholder="body" /><br>
+
+  <button type="submit" (click)="createBlog()">Tạo mới</button>
+</form>
