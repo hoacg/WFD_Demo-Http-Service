@@ -1,7 +1,10 @@
 <form>
   <input name="userId" type="number" [(ngModel)]="blog.userId" placeholder="user id" /><br>
   <input name="title" type="text" [(ngModel)]="blog.title"  placeholder="title"/><br>
-  <input name="body" type="text"  [(ngModel)]="blog.body"  placeholder="body" /><br>
+
+  <textarea name="body" [(ngModel)]="blog.body" rows="20" cols="80"></textarea>
+
+  <br>
 
   <button type="submit" (click)="createBlog()">Tạo mới</button>
 </form>
